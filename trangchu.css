@@ -1,0 +1,224 @@
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fffcf1;
+    color: hwb(0 0% 100% / 0.775);
+  }
+.Anhtrangchu {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+.Anhtrangchu img {
+    width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  display: block;
+}
+.Anhtrangchu button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.5);
+      color: rgb(109, 41, 9);
+      border: none;
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 2;
+}
+.Anhtrangchu .prev {
+  left: 10px;
+}
+.Anhtrangchu .next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .Anhtrangchu button {
+    font-size: 28px;
+    padding: 12px;
+  }
+}
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+  .slider button:hover {
+    background-color: rgba(0,0,0,0.7);
+  }
+  .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ba6060;
+    background-color: rgb(82, 28, 13);
+    position: relative;
+  }
+  .nav-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    z-index: 9999;
+  }
+  .nav-left a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .logo img {
+    height: 40px;
+  }
+  img {
+    border: 2px solid #f4eff3;
+    border-radius: 20px;
+  }
+  img:hover {
+    transform: scale(1.06);
+  }
+  .search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #da9d43;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgb(255, 155, 69);
+  }
+  .search-box input {
+    border: none;
+    outline: none;
+    padding: 5px;
+  }
+  .search-box button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    color:white;
+  }
+  @media (max-width: 768px) {
+    .nav-left {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgb(82, 28, 13);
+      border-top: 1px solid #ffffff;
+      padding: 10px 0;
+    }
+    .nav-left.show {
+      display: flex;
+      flex-direction: column;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  .container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+    color:rgb(107, 11, 11)
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding:50px;
+  }
+  .card {
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+    .card a {
+    color: rgb(107, 11, 11);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .card-content {
+    padding: 12px;
+    color: rgb(20, 18, 18);
+    transition: 0.5s;
+    text-align: center;
+  }
+  .card-content:hover {
+    color: rgb(221, 124, 34);
+    transform: scale(0.9);
+  }
+  .recipe-detail {
+    display: none;
+    text-align: center;
+  }
+  .recipe-detail img {
+    width: 50%;
+    height: auto;
+  }
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .slider {
+      height: auto;
+    }
+  }
+  footer {
+    background-color: rgb(82, 28, 13);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+  footer a {
+    color: rgb(255, 155, 69);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+    .social-icons a {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 8px;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  .social-icons a:hover {
+    color: #ffa726;
+  }

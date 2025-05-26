@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nấu ăn thông minh</title>
+<link rel="stylesheet" href="cacloaimon.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="logo">
+    <img src="https://cdn.pixabay.com/photo/2020/05/21/18/17/cooking-5201968_960_720.png" alt="Logo">
+  </div>
+  <div class="hamburger" id="hamburger">☰</div>
+  <div class="nav-left" id="navLinks">
+    <a href="Trangchu.html" data-category="home">Trang chủ</a>
+    <a href="Monngonmoingay.html" data-category="monngon">Món ngon mỗi ngày 🍜</a>
+    <a href="Banh.html" data-category="banh">Bánh 🍰</a>
+    <a href="Dotrangmieng.html" data-category="dotrangmieng">Đồ tráng miệng 🍛</a>
+    <a href="Dochobe.html" data-category="dochobe">Đồ cho bé 🍲</a>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Tìm kiếm món ăn...">
+    <button>🔍</button>
+  </div>
+</nav>
+</div>
+  </section>
+
+<div class="recipe-list" id="recipeList">
+  <h2>Đồ tráng miệng 🍛</h2>
+   <div class="grid" id="recipeGrid">
+    <div class="card">
+      <a href="Sinhtoxoai.html">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.zCvUYN0N5-wqooCevXeD0gHaE8&pid=Api&P=0&h=220" alt="Sinh tố xoài">
+      <div class="card-content">
+        <h3>Sinh tố xoài</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Sinhtobo.html">
+      <img src="https://cdn.tgdd.vn/Files/2019/04/22/1162314/dang-xinh-da-dep-voi-sinh-to-bo-chuoi-thom-ngon-202201071430267959.jpg" alt="Sinh tố bơ">
+      <div class="card-content">
+        <h3>Sinh tố bơ</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Duadam.html">
+      <img src="https://vuahoachat.com/wp-content/uploads/2024/02/dua-dam.png" alt="Dừa dầm">
+      <div class="card-content">
+        <h3>Dừa dầm</h3>
+        </a>
+      </div>
+    </div>
+   <div class="card">
+    <a href="Matchalattle.html">
+      <img src="https://i.pinimg.com/736x/b9/16/9f/b9169ffb65a3da0ceee2bbb61e169f03.jpg" alt="Matcha lattle">
+      <div class="card-content">
+        <h3>Matcha lattle</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+
+<footer>
+  <p>&copy; 2025 Nấu Ăn Thông Minh. Được phát triển bởi nhóm 3.</p>
+  <p>
+    <a href="#">Về chúng tôi</a> |
+    <a href="#">Liên hệ</a> |
+    <a href="#">Chính sách bảo mật</a>
+  </p>
+    <div class="social-icons">
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+</footer>
+<script>
+  const recipes = Array.from(document.querySelectorAll('#recipeGrid .card')).map(card => {
+    return {
+      name: card.querySelector('h3').textContent,
+      image: card.querySelector('img').src,
+      link: card.querySelector('a').href
+    };
+  });
+
+  document.querySelector('.search-box button').addEventListener('click', () => {
+    const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+    document.getElementById('recipeList').style.display = 'block';
+
+    const grid = document.getElementById('recipeGrid');
+    grid.innerHTML = '';
+
+    const filtered = recipes.filter(recipe =>
+      recipe.name.toLowerCase().includes(keyword)
+    );
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; font-size: 18px;">Chưa cập nhật món ăn</p>';
+    } else {
+      filtered.forEach(recipe => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <a href="${recipe.link}">
+            <img src="${recipe.image}" alt="${recipe.name}" />
+            <div class="card-content"><h3>${recipe.name}</h3></div>
+          </a>
+        `;
+        grid.appendChild(card);
+      });
+    }
+  });
+
+  document.getElementById('searchInput').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      document.querySelector('.search-box button').click();
+    }
+  });
+
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+</body>
+</html>

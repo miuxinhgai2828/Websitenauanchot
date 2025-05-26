@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nấu ăn thông minh</title>
+<link rel="stylesheet" href="monan.css">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="logo">
+    <img src="https://cdn.pixabay.com/photo/2020/05/21/18/17/cooking-5201968_960_720.png" alt="Logo">
+  </div>
+  <div class="hamburger" id="hamburger">☰</div>
+  <div class="nav-left" id="navLinks">
+    <a href="Trangchu.html" data-category="home">Trang chủ</a>
+    <a href="Monngonmoingay.html" data-category="monngon">Món ngon mỗi ngày 🍜</a>
+    <a href="Banh.html" data-category="banh">Bánh 🍰</a>
+    <a href="Dotrangmieng.html" data-category="dotrangmieng">Đồ tráng miệng 🍛</a>
+    <a href="Dochobe.html" data-category="dochobe">Đồ cho bé 🍲</a>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Tìm kiếm món ăn...">
+    <button>🔍</button>
+  </div>
+</nav>
+</div>
+  </section>
+<div class="container">
+  <!-- Cột trái: nội dung món ăn -->
+  <div class="main-content">
+    <h1>Bánh quy</h1>
+      <img src="https://cdn.tgdd.vn/Files/2021/09/10/1381615/3-cach-lam-banh-quy-bang-noi-chien-khong-dau-gion-thom-don-gian-202109101300148122.jpg" alt="Bánh quy" class="thitbo">
+    <div class="recipe-info">
+      <div class="info-item">
+        <span>Chuẩn bị</span>
+        <strong>30 phút</strong>
+      </div>
+      <div class="info-item">
+        <span>Chế biến</span>
+        <strong>15 phút</strong>
+      </div>
+      <div class="info-item">
+        <span>Độ khó</span>
+        <strong>Trung bình</strong>
+      </div>
+    </div>
+    <p><b>Nguyên liệu:</b></p>
+    <ul>
+  <li>Bơ lạt</li>
+  <li>Bột mì</li>
+  <li>Đường</li>
+  <li>Trứng gà</li>
+  <li>Vani</li>
+</ul>
+<h3>Các bước thực hiện:</h3>
+<div class="step-box">
+  <div class="step-number">1</div>
+  <div class="step-text">
+    <h4>Trộn bột</h4>
+    <p>Đánh bơ với đường đến khi bông mịn, thêm lòng đỏ trứng và vani, đánh đều, rây bột mì vào, trộn thành khối bột mịn.</p>
+  </div>
+</div>
+<div class="step-box">
+  <div class="step-number">2</div>
+  <div class="step-text">
+    <h4>Tạo hình bánh</h4>
+    <p>Nặn bột thành viên tròn, dẹt. Xếp lên khay có lót giấy nến.</p>
+  </div>
+</div>
+<div class="step-box">
+  <div class="step-number">3</div>
+  <div class="step-text">
+    <h4>Nướng bánh</h4>
+    <p>Cho bánh vào lò và nướng bánh khoảng 15-20 phút đến khi bánh vàng.</p>
+  </div>
+</div>
+    <div class="video-wrapper">
+      <h3>VIDEO HƯỚNG DẪN</h3>
+          <iframe width="100%" height="300" 
+    src="https://www.youtube.com/embed/J3Pgv-Qfa2Y" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+  </iframe>
+    </div>
+  </div>
+  <!-- Cột phải: danh sách các món liên quan -->
+  <div class="sidebar">
+    <h2>Bánh 🍰</h2>
+    <ul>
+      <li>
+        <div class="monanngon"><a href="Banhtrungthu.html">
+        <img src="https://static.vinwonders.com/production/banh-trung-thu-trung-chay-4.jpg">
+        <div class="sidebar-content">Bánh trung thu</div>
+          </div>
+        </a></li>
+      <li><div class="monanngon"><a href="Banhbonglan.html">
+        <img src="http://cdn.tgdd.vn/Files/2021/08/16/1375550/cong-thuc-lam-banh-bong-lan-sua-chua-nuong-thom-ngon-don-gian-tai-nha-202202161519481893.jpg">
+        <div class="sidebar-content">Bánh bông lan</div>
+          </div>
+        </a></li>
+      <li><div class="monanngon"><a href="Banhchuoi.html">
+        <img src="https://i.ytimg.com/vi/9VrOMypcwYE/maxresdefault.jpg">
+        <div class="sidebar-content">Bánh chuối</div>
+          </div>
+        </a></li>
+    </ul>
+  </div>
+</div>
+<!--Hết cột phải-->
+<footer class="comment-footer">
+  <h3>BÌNH LUẬN</h3>
+  <form class="comment-form" onsubmit="submitRating(); return false;">
+    <div class="form-row">
+      <input id="tennguoidung" type="text" placeholder="Tên người dùng" required>
+      <div class="rating-section">
+        <label for="rating">Đánh giá món ăn:</label>
+        <select id="rating" name="rating">
+          <option value="">--Chọn--</option>
+          <option value="1">★</option>
+          <option value="2">★★</option>
+          <option value="3">★★★</option>
+          <option value="4">★★★★</option>
+          <option value="5">★★★★★</option>
+        </select>
+      </div>
+      <textarea id="ratingComment" placeholder="Nội dung" rows="5" required></textarea>
+      <button type="submit">Gửi đánh giá</button>
+    </div>
+    <div id="message" style="margin-top: 10px; font-weight: bold;"></div>
+  </form>
+  <script>
+    function submitRating() {
+      const stars = document.getElementById('rating').value;
+      const ten = document.getElementById('tennguoidung').value.trim();
+      const comment = document.getElementById('ratingComment').value.trim();
+      const message = document.getElementById('message');
+      if (!stars || !ten || !comment) {
+        message.textContent = 'Vui lòng điền đầy đủ thông tin và chọn số sao.';
+        message.style.color = 'red';
+        return;
+      }
+      // Hiển thị dòng chữ dưới button
+      message.textContent = 'Đánh giá của bạn đã được gửi thành công. Cảm ơn bạn!';
+      message.style.color = 'green';
+      // Reset form
+      document.getElementById('rating').value = '';
+      document.getElementById('tennguoidung').value = '';
+      document.getElementById('ratingComment').value = '';
+    }
+</script>
+
+  </form>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+  const nav = document.getElementById('navLinks');
+  nav.classList.toggle('show'); //Menu xổ xuống của Hamburger
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nấu ăn thông minh</title>
+<link rel="stylesheet" href="btl.css">
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="logo">
+    <img src="https://cdn.pixabay.com/photo/2020/05/21/18/17/cooking-5201968_960_720.png" alt="Logo">
+  </div>
+  <div class="hamburger" id="hamburger">☰</div>
+  <div class="nav-left" id="navLinks">
+    <a href="#" data-category="home">Trang chủ</a>
+    <a href="#" data-category="monngon">Món ngon mỗi ngày 🍜</a>
+    <a href="#" data-category="banh">Bánh 🍰</a>
+    <a href="#" data-category="dotrangmieng">Đồ tráng miệng 🍛</a>
+    <a href="#" data-category="dochobe">Đồ cho bé 🍲</a>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Tìm kiếm món ăn...">
+    <button>🔍</button>
+  </div>
+</nav>
+
+<div class="container">
+  <section id="homeSection">
+    <h2>Chào mừng đến với Nấu ăn thông minh 🍽️ </h2>
+    <p style="text-align: center; font-size: 18px;">Khám phá các món ăn ngon, dễ làm ngay tại nhà!</p>
+  </section>
+
+<div class="recipe-list" id="recipeList">
+  <h2>Danh sách món ăn</h2>
+   <div class="grid" id="recipeGrid">
+    <div class="card" data-id="1" data-category="monngon">
+      <img src="https://i.ytimg.com/vi/w_DwTzDXHSo/maxresdefault.jpg" alt="Thịt bò xào giá đỗ">
+      <div class="card-content">
+        <h3>Thịt bò xào giá đỗ</h3>
+      </div>
+    </div>
+    <div class="card" data-id="2" data-category="monngon">
+      <img src="https://nuocmamtin.com/wp-content/uploads/2021/10/com-rang-thap-cam-2.jpg" alt="Cơm rang thập cẩm">
+      <div class="card-content">
+        <h3>Cơm rang thập cẩm</h3>
+      </div>
+    </div>
+    <div class="card" data-id="3" data-category="monngon">
+      <img src="https://store.longphuong.vn/wp-content/uploads/2023/02/xiu-mai-sot-ca-chua-4.jpg" alt="Xíu mại sốt cà chua">
+      <div class="card-content">
+        <h3>Xíu mại sốt cà chua</h3>
+      </div>
+    </div>
+   <div class="card" data-id="4" data-category="monngon">
+      <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/6534831e-ccba-46be-996e-8a9d398c9558/Derivates/1232c442-46f6-4b0c-90bd-77df0e98afc0.jpg" alt="Canh mồng tơi">
+      <div class="card-content">
+        <h3>Canh mồng tơi</h3>
+      </div>
+    </div>
+   <div class="card" data-id="5" data-category="banh">
+      <img src="http://cdn.tgdd.vn/Files/2021/08/16/1375550/cong-thuc-lam-banh-bong-lan-sua-chua-nuong-thom-ngon-don-gian-tai-nha-202202161519481893.jpg" alt="Bánh bông lan">
+      <div class="card-content">
+        <h3>Bánh bông lan</h3>
+      </div>
+    </div>
+  <div class="card" data-id="6" data-category="banh">
+      <img src="https://i.ytimg.com/vi/9VrOMypcwYE/maxresdefault.jpg" alt="Bánh chuối">
+      <div class="card-content">
+        <h3>Bánh chuối</h3>
+      </div>
+    </div>
+  <div class="card" data-id="7" data-category="banh">
+      <img src="https://cdn.tgdd.vn/Files/2021/09/10/1381615/3-cach-lam-banh-quy-bang-noi-chien-khong-dau-gion-thom-don-gian-202109101300148122.jpg" alt="Bánh quy">
+      <div class="card-content">
+        <h3>Bánh quy</h3>
+      </div>
+    </div>
+  <div class="card" data-id="8" data-category="banh">
+      <img src="https://static.vinwonders.com/production/banh-trung-thu-trung-chay-4.jpg" alt="Bánh trung thu">
+      <div class="card-content">
+        <h3>Bánh trung thu</h3>
+      </div>
+    </div>
+  <div class="card" data-id="9" data-category="dotrangmieng">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.zCvUYN0N5-wqooCevXeD0gHaE8&pid=Api&P=0&h=220" alt="Sinh tố xoài">
+      <div class="card-content">
+        <h3>Sinh tố xoài</h3>
+      </div>
+    </div>
+  <div class="card" data-id="10" data-category="dotrangmieng">
+      <img src="https://cdn.tgdd.vn/Files/2019/04/22/1162314/dang-xinh-da-dep-voi-sinh-to-bo-chuoi-thom-ngon-202201071430267959.jpg" alt="Sinh tố bơ">
+      <div class="card-content">
+        <h3>Sinh tố bơ</h3>
+      </div>
+    </div>
+  <div class="card" data-id="11" data-category="dotrangmieng">
+      <img src="https://vuahoachat.com/wp-content/uploads/2024/02/dua-dam.png" alt="Dừa dầm">
+      <div class="card-content">
+        <h3>Dừa dầm</h3>
+      </div>
+    </div>
+     <div class="card" data-id="12" data-category="dotrangmieng">
+      <img src="https://i.pinimg.com/736x/b9/16/9f/b9169ffb65a3da0ceee2bbb61e169f03.jpg" alt="Matcha latte">
+      <div class="card-content">
+        <h3>Matcha latte</h3>
+      </div>
+    </div>
+   <div class="card" data-id="13" data-category="dochobe">
+      <img src="https://lh7-us.googleusercontent.com/fhFr443qY88LuXC6ldmTtX2VE19r8YvhrvX1NzPvEv52opL5PAGLLxNf6tMWS7DR3_OmBjmkUj1YKuQFQ6XhbyWHULZrfP9VcAf3fRMi_fQIDY5hfVdby9O-U19vDvVcVeDuOfH6gsBWlsDpOc5wyf8" alt="Cháo thịt bò bí đỏ">
+      <div class="card-content">
+        <h3>Cháo thịt bò bí đỏ</h3>
+      </div>
+    </div>
+    <div class="card" data-id="14" data-category="dochobe">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dpxOs56cmP_uo_2TprI3g05HRFSBZWApbQ&s" alt="Súp cua măng tây">
+      <div class="card-content">
+        <h3>Súp cua măng tây</h3>
+      </div>
+    </div>
+     <div class="card" data-id="15" data-category="dochobe">
+      <img src="https://cdn.tgdd.vn/2022/08/CookRecipe/GalleryStep/thanh-pham-124.jpg" alt="Cà ri ức gà">
+      <div class="card-content">
+        <h3>Cà ri ức gà</h3>
+      </div>
+    </div>
+     <div class="card" data-id="16" data-category="dochobe">
+      <img src="https://cdn.tgdd.vn/2021/08/CookRecipe/GalleryStep/thanh-pham-1048.jpg" alt="Snack khoai tây phô mai">
+      <div class="card-content">
+        <h3>Snack khoai tây phô mai</h3>
+      </div>
+    </div>
+  </div>
+</div>
+  <section id="recipeDetail" class="recipe-detail"></section>
+</div>
+<script>
+  const recipes = [
+    {
+      id: '1',
+      category: 'monngon',
+      name: 'Thịt bò xào giá đỗ',
+      image: 'https://i.ytimg.com/vi/w_DwTzDXHSo/maxresdefault.jpg',
+      instructions: 'Nguyên liệu: thịt bò, tỏi, giá đỗ, dầu ăn, các gia vị.\n Cách làm: \n1. Ướp thịt bò với nước mắm, tiêu, hạt nêm khoảng 15 phút. \n2. Xào thịt bò: Cho dầu vào chảo, phi tỏi thơm rồi cho thịt bò vào xào nhanh trên lửa lớn đến khi thịt tái thì cho ra đĩa. \n3. Xào giá đỗ: Cho giá đỗ vào chảo lúc nãy rồi xào nhanh tay, nêm nếm gia vị vừa ăn. \n4. Cho thịt bò đã xào vào chảo giá và đảo đều khoảng 1-2 phút rồi tắt bếp.',
+      video: 'https://www.youtube.com/embed/w_DwTzDXHSo'
+    },
+     {
+      id: '2',
+      category: 'monngon',
+      name: 'Cơm rang thập cẩm',
+      image: 'https://nuocmamtin.com/wp-content/uploads/2021/10/com-rang-thap-cam-2.jpg',
+      instructions: 'Nguyên liệu: cơm, trứng gà, xúc xích, tôm, đậu cove, cà rốt, dầu ăn, các gia vị. \n Cách làm: \n1. Sơ chế và xào nguyên liệu: Cho tôm, xúc xích, rau củ vào xào chín, nêm gia vị vừa ăn. \n2. Rang cơm: Đánh tan trứng, trộn đều với cơm rồi cho cơm vào chảo có ít dầu, rang trên lửa lớn cho hạt cơm săn và tơi. \n3. Cho hỗn hợp nhân đã xào vào cơm, đảo đều và nêm lại lần cuối cho vừa.',
+      video: 'https://www.youtube.com/watch?v=iTg-z-INLPk'},
+     {
+      id: '3',
+      category: 'monngon',
+      name: 'Xíu mại sốt cà chua',
+      image: 'https://store.longphuong.vn/wp-content/uploads/2023/02/xiu-mai-sot-ca-chua-4.jpg',
+      instructions: 'Nguyên liệu: thịt heo xay, giò sống, tôm, mộc nhĩ, hành, tỏi, sốt cà chua, nước hầm xương, gia vị thông thường. \n Cách làm: \n1. Sơ chế: tôm bóc vỏ và rửa sạch rồi xay nhuyễn, mộc nhĩ và hành băm nhỏ. \n2. Trộn thịt xay với mộc nhĩ, hành tím, tiêu, chút nước mắm.Viên tròn thành từng viên nhỏ. Hấp khoảng 10–15 phút cho chín. \n3. Phi thơm hành tỏi, cho cà chua vào xào mềm, nêm muối, đường, nước mắm cho vừa ăn. Thêm chút nước. \n4. Cho xíu mại vào chảo sốt, đun lửa nhỏ khoảng 5–10 phút cho thấm gia vị. Rắc hành lá lên trên.',
+      video: 'https://www.youtube.com/watch?v=17yL9RGiwLM'},
+     {
+      id: '4',
+      category: 'monngon',
+      name: 'Canh mồng tơi',
+      image: 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/6534831e-ccba-46be-996e-8a9d398c9558/Derivates/1232c442-46f6-4b0c-90bd-77df0e98afc0.jpg',
+      instructions: 'Nguyên liệu: cua đồng, rau mồng tơi, hành phi, hạt nêm. \n1. Chế biến cua: làm sạch cua, tách mai lấy gạch. Giã hoặc xoay nhuyễn phần thân cua, lọc lấy nước. Phi hành, cho gạch cua vào xào chín, để riêng \n2. Nấu canh: Đun nước cua đã lọc, khuấy đều đến khi sôi để tránh lắng cặn. Khi sôi, thịt cua nổi lên thành mảng, hạ lửa nhỏ. \n3. Cho mồng tơi vào, nêm nếm gia vị vừa ăn. Khi rau chín tới, cho phần gạch cua đã xào vào.',
+      video: 'https://www.youtube.com/watch?v=SyPM6RxIFCk'},
+    {
+      id: '5',
+      category: 'banh',
+      name: 'Bánh bông lan',
+      image: 'http://cdn.tgdd.vn/Files/2021/08/16/1375550/cong-thuc-lam-banh-bong-lan-sua-chua-nuong-thom-ngon-don-gian-tai-nha-202202161519481893.jpg',
+      instructions: 'Nguyên liệu: trứng gà, bột mì, đường, sữa tươi, dầu ăn, vani, muối. \n Cách làm: \n1. Tách lòng đỏ và lòng trắng trứng riêng. đánh lòng trắng trứng với chút muối, sau đó cho từ từ, đánh đến khi bông cứng. Cho từng lòng đỏ vào đánh tiếp, rồi thêm dầu, sữa, vani. \n2. Rây bột mì vào hỗn hợp, trộn nhẹ tay theo kiểu fold để không làm xẹp bọt khí. \n3. Đổ bột vào khuôn, gõ nhẹ và cho vào lò nướng. ',
+      video: 'https://www.youtube.com/watch?v=0xqW_Nsk-VY'},
+    {
+      id: '6',
+      category: 'banh',
+      name: 'Bánh chuối',
+      image: 'https://i.ytimg.com/vi/9VrOMypcwYE/maxresdefault.jpg',
+      instructions: 'Nguyên liệu: chuối chín, bột mì, sữa, trứng gà, đường, bơ, vani. \n Cách làm: \n1. Nghiền nhuyễn chuối, trộn với trứng, sữa, đường, vani, bơ đun chảy rồi thêm bột mì và trộn đều. \n2. Làm nóng lò trước 10 phút ở 170 độ C. Đổ hỗn hợp vào khuôn đã quét bơ. Nướng 45-60 phút ở 170 độ C, đến khi mặt bánh vàng nâu.',
+      video: 'https://www.youtube.com/watch?v=nGIG4jgwU8E'},
+    {
+      id: '7',
+      category: 'banh',
+      name: 'Bánh quy',
+      image: 'https://cdn.tgdd.vn/Files/2021/09/10/1381615/3-cach-lam-banh-quy-bang-noi-chien-khong-dau-gion-thom-don-gian-202109101300148122.jpg',
+      instructions: 'Nguyên liệu: bơ lạt, đường, bột mì, vani, trứng gà. \n Cách làm: \n1. Đánh bơ với đường đến khi bông mịn, thêm lòng đỏ trứng và vani, đánh đều, rây bột mì vào, trộn thành khối bột mịn. \n2. Nặn bột thành viên tròn, dẹt. Xếp lên khay có lót giấy nến. \n3. Cho bánh vào lò và nướng bánh khoảng 15-20 phút đến khi bánh vàng.',
+      video: 'https://www.youtube.com/watch?v=J3Pgv-Qfa2Y'},
+    {
+      id: '8',
+      category: 'banh',
+      name: 'Bánh trung thu',
+      image: 'https://static.vinwonders.com/production/banh-trung-thu-trung-chay-4.jpg',
+      instructions: 'Nguyên liệu: bột mì, nước đường nướng bánh, dầu ăn, lòng đỏ trứng gà, đậu xanh, đường, vani, nước tro tàu. \n Cách làm: \n1. Trộn nước đường, dầu ăn, lòng đỏ trứng và nước tro tàu. rây bột mì vào, trộn đều rồi ủ bột trong 30 phút. \n2. Cán mỏng vỏ bánh, bọc lấy nhân rồi cho vào khuôn tạo hình. \n3. Cho vào lò nướng khoảng 5-7 phút cho mặt bánh se lại, lấy ra xịt nước mỏng. Nướng tiếp 2 lần nữa, mỗi lần 7-10 phút cho đến khi bánh chín vàng đều. ',
+      video: 'https://www.youtube.com/watch?v=TcR4b8_vhlk'},
+    {
+      id: '9',
+      category: 'dotrangmieng',
+      name: 'Sinh tố xoài',
+      image: 'https://tse4.mm.bing.net/th?id=OIP.zCvUYN0N5-wqooCevXeD0gHaE8&pid=Api&P=0&h=220',
+      instructions: 'Nguyên liệu: xoài chín, sữa đặc, sữa tươi. \n Cách làm: \n1. Cho xoài, sữa đặc, sữa tươi vào máy xay, xay khoảng 30-45 giây. \n2. Rót ra ly, trang trí.',
+      video: 'https://www.youtube.com/watch?v=enLgOuHOoBE'},
+    {
+      id: '10',
+      category: 'dotrangmieng',
+      name: 'Sinh tố bơ',
+      image: 'https://cdn.tgdd.vn/Files/2019/04/22/1162314/dang-xinh-da-dep-voi-sinh-to-bo-chuoi-thom-ngon-202201071430267959.jpg',
+      instructions: 'Nguyên liệu: bơ chín, sữa đặc, sữa tươi. \n Cách làm: \n1. Cho bơ, sữa đặc, sữa tươi vào máy xay, xay khoảng 30-45 giây. \n2. Rót ra ly, trang trí.',
+      video: 'https://www.youtube.com/watch?v=aLNRx2LxdFI'},
+    {
+      id: '11',
+      category: 'dotrangmieng',
+      name: 'Dừa dầm',
+      image: 'https://vuahoachat.com/wp-content/uploads/2024/02/dua-dam.png',
+      instructions: 'Nguyên liệu: cơm dừa non, nước cốt dừa, sữa tươi, sữa đặc, thạch dừa. \n Cách làm: \n1. Trộn nước cốt dừa, sữa tươi và sữa đặc rồi khuấy đều. \n2. Cho cơm dừa non, thạch dừa vào bát. \n3. Đổ hỗn hợp sữa dừa lên. ',
+      video: 'https://www.youtube.com/watch?v=L8okBDhLln4'},
+    {
+      id: '12',
+      category: 'dotrangmieng',
+      name: 'Matcha latte',
+      image: 'https://i.pinimg.com/736x/b9/16/9f/b9169ffb65a3da0ceee2bbb61e169f03.jpg',
+      instructions: 'Nguyên liệu: bột matcha, sữa tươi. \n Cách làm: \n1. Cho bột matcha ra bát, cho 1 chút nước rồi khuấy đều cho tan bột matcha. \n2. Cho sữa tươi ra cốc rồi đổ hỗn hợp matcha vừa pha lên trên.',
+      video: 'https://www.youtube.com/watch?v=NS2TuiWNiPU'},
+    {
+      id: '13',
+      category: 'dochobe',
+      name: 'Cháo thịt bò bí đỏ',
+      image: 'https://lh7-us.googleusercontent.com/fhFr443qY88LuXC6ldmTtX2VE19r8YvhrvX1NzPvEv52opL5PAGLLxNf6tMWS7DR3_OmBjmkUj1YKuQFQ6XhbyWHULZrfP9VcAf3fRMi_fQIDY5hfVdby9O-U19vDvVcVeDuOfH6gsBWlsDpOc5wyf8',
+      instructions: 'Nguyên liệu: thịt bò, bí đỏ, cháo trắng và gia vị cho bé. \n Cách làm \n1. Sơ chế: bào vỏ bí, thái thành các miếng nhỏ. \n2. Bằm nhỏ thịt bò rồi xào lên. \n3. Hầm bí đỏ mềm, xay nhuyễn, nấu với cháo trắng và thịt bò bằm.',
+      video: 'https://www.youtube.com/watch?v=LU_nfd_i8WA'},
+     {
+      id: '14',
+      category: 'dochobe',
+      name: 'Súp cua măng tây',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dpxOs56cmP_uo_2TprI3g05HRFSBZWApbQ&s',
+      instructions: 'Nguyên liệu: cua biển, trứng gà, xương ức gà. bột năng, măng tây. \n Cách làm: \n1. Sơ chế: rửa sạch xương gà rồi hầm lấy nước. Măng tây rửa sạch, chỉ dùng phần non, cắt nhỏ ròi cho vào nước hầm gà. \n2. Cua biển sau khi rửa sạch, hấp chín và gỡ phần thịt cua. Phi thơm hành rồi cho thịt cua vào đảo đều đến khi săn lại. \n3. Hòa bột năng với chút nước, rót từ từ vào nồi nước dùng và khuấy đều đến khi đạt độ sánh. \n4. Đập trứng gà ra bát, đánh tan rồi rót từ từ vào nồi súp và đánh đều tay rồi nêm gia vị vừa ăn cho bé. ', 
+      video: 'https://www.youtube.com/watch?v=TS5ihO7LOUY'},
+     {
+      id: '15',
+      category: 'dochobe',
+      name: 'Cà ri ức gà',
+      image: 'https://cdn.tgdd.vn/2022/08/CookRecipe/GalleryStep/thanh-pham-124.jpg',
+      instructions: 'Nguyên liệu: ức gà không xương, khoai lang, nước cốt dừa, bột cà ri, bột năng, dầu ăn, gia vị thông dụng, sả, tỏi. \n Cách làm: \n1. Sơ chế: rửa sạch ức gà rồi cắt thành từng miếng nhỏ. Khoai lang gọt sạch vỏ và thái nhỏ. Rửa sạch sả rồi băm nhuyễn, tỏi bóc vỏ, băm nhỏ và để riêng. \n2. Ướp ức gà với bột cà ri, sả băm, đường, muối, bột ngọt, hạt nêm. Ướp trong khoảng 15 phút. \n3. Cho chút dầu ăn lên chảo, sau đó cho sả và tỏi băm còn lại vào chảo, phí đến khi thơm vàng rồi cho ức gà đã ướp và xào nhanh trên lửa lớn cho thịt săn lại. \n4. Cho vào nồi khoảng 1 lít nước rồi cho phần thịt gà đã xào vào,, nấu khoảng 15 phút cho thịt chín mềm  rồi cho khoai lang vào, nấu thêm 5 phút cho nước cốt dừa rồi nêm nêm gia vị vừa phải',
+      video: 'https://www.youtube.com/watch?v=xySE3CCA1Kk'},
+     {
+      id: '16',
+      category: 'dochobe',
+      name: 'Snack khoai tây phô mai',
+      image: 'https://cdn.tgdd.vn/2021/08/CookRecipe/GalleryStep/thanh-pham-1048.jpg',
+      instructions: 'Nguyên liệu: Khoai tây, bột phô mai, bơ lạt, dầu ăn, muối. \n cách làm: \n1. Sơ chế: Rửa sạch khoai tây rồi ngâm với nước muối loãng. Sau đó cắt khoai thành các lát mỏng. \n2. Cho bơ lạt và dầu ăn vào chảo, đến khi bơ tan hết cho khoai tây vào chiên. Chiên đến khi vàng đều thì vớt ra. \n3. Đợi đến khi khoai ráo dầu thì cho bột phô mai vào lắc. ',
+      video: 'https://www.youtube.com/watch?v=xunojr7gZRI'
+    },
+  ];
+  
+  function renderRecipes(category) {
+  document.getElementById('recipeDetail').style.display = 'none';
+  document.getElementById('recipeList').style.display = 'block';
+  document.getElementById('homeSection').style.display = category === 'home' ? 'block' : 'none';
+
+  const grid = document.getElementById('recipeGrid');
+  grid.innerHTML = '';
+  recipes.filter(r => category === 'home' || r.category === category).forEach(recipe => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <img src="${recipe.image}" alt="${recipe.name}" />
+      <div class="card-content"><p>${recipe.name}</p></div>
+    `;
+    card.onclick = () => showRecipeDetail(recipe);
+    grid.appendChild(card);
+  });
+}
+
+function showRecipeDetail(recipe) {
+  document.getElementById('recipeList').style.display = 'none';
+  document.getElementById('homeSection').style.display = 'none';
+  const detail = document.getElementById('recipeDetail');
+  detail.style.display = 'block';
+  detail.innerHTML = `
+    <h2>${recipe.name}</h2>
+    <img src="${recipe.image}" alt="${recipe.name}" />
+    <p style="white-space: pre-line; padding: 20px; font-size: 16px;text-align: left;">${recipe.instructions}</p>
+    <button onclick="window.open('${recipe.video}', '_blank')" style="margin: 20px 0; padding: 10px 20px; font-size: 16px; background-color: #e65c5c; border: 2px solid #f4eff3;
+  border-radius: 20px;">▶ Xem video trên YouTube</button>
+    <div class="rating-section" style="padding: 20px; border-top: 1px solid #ccc; margin-top: 20px;">
+        <h3>Đánh giá món ăn</h3>
+        <label for="ratingStars">Chọn số sao:</label>
+        <select id="ratingStars">
+          <option value="">--Chọn--</option>
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+        <br/><br/>
+        <textarea id="ratingComment" rows="3" style="width: 100%;" placeholder="Viết nhận xét..."></textarea>
+        <br/>
+        <button onclick="submitRating()" style="margin-top: 10px; padding: 10px 15px; background-color: #28a745; border: 2px solid #f4eff3;
+  border-radius: 20px;">Gửi đánh giá</button>
+        <p id="ratingMessage" style="margin-top: 10px; font-weight: bold;"></p>
+      </div>
+    <button class="back-btn" onclick="renderRecipes(currentCategory)">Quay lại</button>
+  `;
+}
+function submitRating() {
+    const stars = document.getElementById('ratingStars').value;
+    const comment = document.getElementById('ratingComment').value.trim();
+    const messageEl = document.getElementById('ratingMessage');
+
+    if (!stars || comment === '') {
+      messageEl.textContent = 'Vui lòng chọn số sao và viết nhận xét.';
+      messageEl.style.color = 'red';
+      return;
+    }
+
+    setTimeout(() => {
+      messageEl.textContent = 'Đánh giá của bạn đã được gửi thành công. Cảm ơn bạn!';
+      messageEl.style.color = 'green';
+      document.getElementById('ratingStars').value = '';
+      document.getElementById('ratingComment').value = '';
+    }, 500);
+  }
+
+let currentCategory = 'home';
+document.querySelectorAll('[data-category]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    currentCategory = this.getAttribute('data-category');
+    renderRecipes(currentCategory);
+
+    document.getElementById('navLinks').classList.remove('show');
+  });
+});
+
+document.querySelector('.search-box button').addEventListener('click', () => {
+  const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+  document.getElementById('homeSection').style.display = 'none';
+  document.getElementById('recipeDetail').style.display = 'none';
+  document.getElementById('recipeList').style.display = 'block';
+
+  const grid = document.getElementById('recipeGrid');
+  grid.innerHTML = '';
+
+  const filtered = recipes.filter(recipe =>
+    recipe.name.toLowerCase().includes(keyword)
+  );
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; font-size: 18px;">Chưa cập nhật món ăn</p>';
+  } else {
+    filtered.forEach(recipe => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${recipe.image}" alt="${recipe.name}" />
+        <div class="card-content"><p>${recipe.name}</p></div>
+      `;
+      card.onclick = () => showRecipeDetail(recipe);
+      grid.appendChild(card);
+    });
+  }
+
+  currentCategory = 'search';
+});
+
+document.getElementById('searchInput').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    document.querySelector('.search-box button').click();
+  }
+});
+
+document.getElementById('hamburger').addEventListener('click', () => {
+  const nav = document.getElementById('navLinks');
+  nav.classList.toggle('show');
+});
+
+renderRecipes('home');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nấu ăn thông minh</title>
+<link rel="stylesheet" href="trangchu.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="logo">
+    <img src="https://cdn.pixabay.com/photo/2020/05/21/18/17/cooking-5201968_960_720.png" alt="Logo">
+  </div>
+  <div class="hamburger" id="hamburger">☰</div>
+  <div class="nav-left" id="navLinks">
+    <a href="Trangchu.html" data-category="home">Trang chủ</a>
+    <a href="Monngonmoingay.html" data-category="monngon">Món ngon mỗi ngày 🍜</a>
+    <a href="Banh.html" data-category="banh">Bánh 🍰</a>
+    <a href="Dotrangmieng.html" data-category="dotrangmieng">Đồ tráng miệng 🍛</a>
+    <a href="Dochobe.html" data-category="dochobe">Đồ cho bé 🍲</a>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Tìm kiếm món ăn...">
+    <button>🔍</button>
+  </div>
+</nav>
+
+<div class="container">
+  <section id="homeSection">
+    <div class="Anhtrangchu">
+  <img src="nauanthongminh.png" id="slideImage" alt="Ảnh slider">
+  <button class="prev" onclick="prevImage()">❮</button>
+  <button class="next" onclick="nextImage()">❯</button>
+  </div>
+  <script>
+  const images = ["nauanthongminh.png", "anh2.png", "anh3.png"];
+  let currentIndex = 0;
+  function showImage(index) {
+    const imgElement = document.getElementById("slideImage");
+    imgElement.src = images[index];
+  }
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+    setInterval(nextImage, 10000); //Tự động chuyển ảnh mỗi 10s
+</script>
+</div>
+  </section>
+
+<div class="recipe-list" id="recipeList">
+  <h2>DANH SÁCH MÓN ĂN</h2>
+   <div class="grid" id="recipeGrid">
+    <div class="card">
+      <a href="Thitbo.html">
+      <img src="https://i.ytimg.com/vi/w_DwTzDXHSo/maxresdefault.jpg" alt="Thịt bò xào giá đỗ">
+      <div class="card-content">
+        <h3>Thịt bò xào giá đỗ</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Comrang.html">
+      <img src="https://nuocmamtin.com/wp-content/uploads/2021/10/com-rang-thap-cam-2.jpg" alt="Cơm rang thập cẩm">
+      <div class="card-content">
+        <h3>Cơm rang thập cẩm</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Xiumai.html">
+      <img src="https://store.longphuong.vn/wp-content/uploads/2023/02/xiu-mai-sot-ca-chua-4.jpg" alt="Xíu mại sốt cà chua">
+      <div class="card-content">
+        <h3>Xíu mại sốt cà chua</h3>
+        </a>
+      </div>
+    </div>
+   <div class="card">
+    <a href="Canhmongtoi.html">
+      <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/6534831e-ccba-46be-996e-8a9d398c9558/Derivates/1232c442-46f6-4b0c-90bd-77df0e98afc0.jpg" alt="Canh mồng tơi">
+      <div class="card-content">
+        <h3>Canh mồng tơi</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Banhbonglan.html">
+      <img src="http://cdn.tgdd.vn/Files/2021/08/16/1375550/cong-thuc-lam-banh-bong-lan-sua-chua-nuong-thom-ngon-don-gian-tai-nha-202202161519481893.jpg" alt="Bánh bông lan">
+      <div class="card-content">
+        <h3>Bánh bông lan</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Banhchuoi.html">
+      <img src="https://i.ytimg.com/vi/9VrOMypcwYE/maxresdefault.jpg" alt="Bánh chuối">
+      <div class="card-content">
+        <h3>Bánh chuối</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Banhquy.html">
+      <img src="https://cdn.tgdd.vn/Files/2021/09/10/1381615/3-cach-lam-banh-quy-bang-noi-chien-khong-dau-gion-thom-don-gian-202109101300148122.jpg" alt="Bánh quy">
+      <div class="card-content">
+        <h3>Bánh quy</h3>
+        </a>
+      </div>
+    </div>
+   <div class="card">
+    <a href="Banhtrungthu.html">
+      <img src="https://static.vinwonders.com/production/banh-trung-thu-trung-chay-4.jpg" alt="Bánh trung thu">
+      <div class="card-content">
+        <h3>Bánh trung thu</h3>
+        </a>
+      </div>
+    </div>
+        <div class="card">
+      <a href="Sinhtoxoai.html">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.zCvUYN0N5-wqooCevXeD0gHaE8&pid=Api&P=0&h=220" alt="Sinh tố xoài">
+      <div class="card-content">
+        <h3>Sinh tố xoài</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Sinhtobo.html">
+      <img src="https://cdn.tgdd.vn/Files/2019/04/22/1162314/dang-xinh-da-dep-voi-sinh-to-bo-chuoi-thom-ngon-202201071430267959.jpg" alt="Sinh tố bơ">
+      <div class="card-content">
+        <h3>Sinh tố bơ</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Duadam.html">
+      <img src="https://vuahoachat.com/wp-content/uploads/2024/02/dua-dam.png" alt="Dừa dầm">
+      <div class="card-content">
+        <h3>Dừa dầm</h3>
+        </a>
+      </div>
+    </div>
+   <div class="card">
+    <a href="Matchalattle.html">
+      <img src="https://i.pinimg.com/736x/b9/16/9f/b9169ffb65a3da0ceee2bbb61e169f03.jpg" alt="Matcha lattle">
+      <div class="card-content">
+        <h3>Matcha lattle</h3>
+        </a>
+      </div>
+    </div>
+        <div class="card">
+      <a href="Chaothitbobido.html">
+      <img src="https://lh7-us.googleusercontent.com/fhFr443qY88LuXC6ldmTtX2VE19r8YvhrvX1NzPvEv52opL5PAGLLxNf6tMWS7DR3_OmBjmkUj1YKuQFQ6XhbyWHULZrfP9VcAf3fRMi_fQIDY5hfVdby9O-U19vDvVcVeDuOfH6gsBWlsDpOc5wyf8" alt="Cháo thịt bò bí đỏ">
+      <div class="card-content">
+        <h3>Cháo thịt bò bí đỏ</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Supcuamangtay.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dpxOs56cmP_uo_2TprI3g05HRFSBZWApbQ&s" alt="Súp cua măng tây">
+      <div class="card-content">
+        <h3>Súp cua măng tây</h3>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Cariucga.html">
+      <img src="https://cdn.tgdd.vn/2022/08/CookRecipe/GalleryStep/thanh-pham-124.jpg" alt="Cà ri ức gà">
+      <div class="card-content">
+        <h3>Cà ri ức gà</h3>
+        </a>
+      </div>
+    </div>
+   <div class="card">
+    <a href="Snack.html">
+      <img src="https://cdn.tgdd.vn/2021/08/CookRecipe/GalleryStep/thanh-pham-1048.jpg" alt="Snack khoai tây phô mai">
+      <div class="card-content">
+        <h3>Snack khoai tây phô mai</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+<footer>
+  <p>&copy; 2025 Nấu Ăn Thông Minh. Được phát triển bởi nhóm 3.</p>
+  <p>
+    <a href="#">Về chúng tôi</a> |
+    <a href="#">Liên hệ</a> |
+    <a href="#">Chính sách bảo mật</a>
+  </p>
+    <div class="social-icons">
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+</footer>
+<script>
+  const recipes = Array.from(document.querySelectorAll('#recipeGrid .card')).map(card => {
+    return {
+      name: card.querySelector('h3').textContent,
+      image: card.querySelector('img').src,
+      link: card.querySelector('a').href
+    };
+  });
+
+  document.querySelector('.search-box button').addEventListener('click', () => {
+    const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+    document.getElementById('homeSection').style.display = 'none';
+    document.getElementById('recipeList').style.display = 'block';
+
+    const grid = document.getElementById('recipeGrid');
+    grid.innerHTML = '';
+
+    const filtered = recipes.filter(recipe =>
+      recipe.name.toLowerCase().includes(keyword)
+    );
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; font-size: 18px;">Chưa cập nhật món ăn</p>';
+    } else {
+      filtered.forEach(recipe => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <a href="${recipe.link}">
+            <img src="${recipe.image}" alt="${recipe.name}" />
+            <div class="card-content"><h3>${recipe.name}</h3></div>
+          </a>
+        `;
+        grid.appendChild(card);
+      });
+    }
+  });
+
+  document.getElementById('searchInput').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      document.querySelector('.search-box button').click();
+    }
+  });
+
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+</body>
+</html>
